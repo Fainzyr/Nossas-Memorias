@@ -1,28 +1,10 @@
 body {
+  max-width: 100vw;
   height: auto;
   background: rgb(236,151,127);
   background: linear-gradient(180deg, rgba(236,151,127,1) 0%, rgba(190,100,80,1) 50%, rgba(142,89,69,1) 100%);
-  overflow-x: hidden;
-}
-
-/*
-     Inicio
-*/
-
-#inicio {
-  margin: 20px;
-  padding: 20px;
-  max-width: 100vw;
-  max-height: auto;
-  box-shadow: 2px 4px 6px cadetblue;
-  border: 3px solid darkgray;
-  background-color: aliceblue;
-  border-radius: 20%;
-}
-
-#inicio p {
-  font-size: 25px;
-  font-family: monospace;
+  padding: 0;
+  margin: 0;
 }
 
 /*
@@ -30,17 +12,14 @@ body {
 */
 
 #album {
-  margin: 20px;
-  padding: 20px;
   max-width: 100vw;
-  max-height: auto;
-  box-shadow: 2px 4px 6px cadetblue;
-  border: 3px solid darkgray;
+  height: auto;
+  box-shadow: 2px 4px 6px rgb(124, 221, 224);
   background-color: aliceblue;
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  border-radius: 5%;
+  border-radius: 10px;
 }
 
 #album h1 {
@@ -117,29 +96,30 @@ body {
 */
 
 #musicas {
-  margin: 20px;
-  padding: 20px;
+  max-width: 100vw;
   background-color: aliceblue;
-  box-shadow: 2px 4px 6px cadetblue;
-  border-radius: 5%;
+  box-shadow: 2px 4px 6px rgb(124, 221, 224);
+  border-radius: 10px;
+  padding: 0;
+  margin: 0;
+}
+
+#musicas #suas h1, #musicas #minhas h1{
+  text-align: center;
 }
 
 #musicas #suas h1 {
   position: relative;
-  left: 50%;
-  transform: translate(-50%, 10%);
   font-family: monospace;
   font-size: 35px;
-  margin-left: 15%;
+  
 }
 
 #musicas #minhas h1 {
   position: relative;
-  left: 50%;
-  transform: translate(-50%, 10%);
   font-family: monospace;
   font-size: 35px;
-  margin-left: 37%;
+  
 }
 
 .playlist {
@@ -235,12 +215,12 @@ body {
 @media (max-width: 768px) {
   /*Album*/
   #album {
-    padding: 10px;
+    max-width: 100vw;
   }
 
   .moldura {
-    width: 125px;
-    height: 125px;
+    width: 150px;
+    height: 150px;
     margin: 15px;
   }
 
@@ -249,8 +229,8 @@ body {
   }
 
   .foto{
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
   }
 
   #imagem-ampliada {
@@ -264,6 +244,10 @@ body {
   }
 
   /*Playlists*/
+
+  #musicas {
+    max-width: 100vw;
+  }
 
   .playlist {
     height: 176px;
@@ -280,7 +264,7 @@ body {
 
   #musicas #minhas h1 {
     font-size: 25px;
-    margin-left: 30%;
+    
   }
 
   /*Final*/
@@ -316,5 +300,9 @@ body {
   #imagem-ampliada img {
     object-fit: cover;
     object-position: center;
-  }   
+  } 
+
+  #final #t {
+    font-size: 40px;
+  }
 }
